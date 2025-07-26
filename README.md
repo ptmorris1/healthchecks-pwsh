@@ -1,7 +1,7 @@
 # healthchecks-pwsh
 
-![PowerShell Gallery](https://img.shields.io/powershellgallery/v/healthchecks-pwsh?color=blue&logo=powershell)
-![License](https://img.shields.io/github/license/ptmorris1/healthchecks-pwsh?color=green)
+![PowerShell Gallery](https://img.shields.io/powershellgallery/v/HealthchecksPwsh?color=blue&logo=powershell)
+![License](https://img.shields.io/github/license/ptmorris1/HealthchecksPwsh?color=green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blue)
 
 > [!TIP]
@@ -20,7 +20,7 @@
 ## 🚀 Installation
 
 ```powershell
-Install-Module -Name healthcheckspwsh -Repository PSGallery -Scope CurrentUser
+Install-PSResource -Name HealthchecksPwsh -Repository PSGallery -Scope CurrentUser
 ```
 
 ---
