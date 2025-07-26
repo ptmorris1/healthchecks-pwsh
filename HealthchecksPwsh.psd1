@@ -1,5 +1,5 @@
 @{
-    ModuleVersion   = '1.0.0'
+    ModuleVersion   = '1.0.1'
     Guid            = '7da498f6-4c96-4146-8730-febfc16920a4'
     CompanyName     = 'Patrick Morris '
     Copyright       = '2025 Patrick Morris'
@@ -19,6 +19,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
+## [1.0.1] - 2025-07-26
+### Fixed
+- Fixed typo in the `public` folder name.
 
 ## [1.0.0] - 2025-07-26
 ### Added
@@ -43,3 +47,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
         }
     }
 }
+

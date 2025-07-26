@@ -1,6 +1,7 @@
 # healthchecks-pwsh
 
 ![PowerShell Gallery](https://img.shields.io/powershellgallery/v/HealthchecksPwsh?color=blue&logo=powershell)
+![Downloads](https://img.shields.io/powershellgallery/dt/HealthchecksPwsh?color=purple)
 ![License](https://img.shields.io/github/license/ptmorris1/healthchecks-pwsh?color=green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blue)
 
@@ -47,13 +48,13 @@ Install-PSResource -Name HealthchecksPwsh -Repository PSGallery -Scope CurrentUs
 
 ## 📡 Ping API Function Mapping
 
-| Ping Action                      | Endpoint Format (UUID)                        | Endpoint Format (Slug)                                 | PowerShell Function |
-|----------------------------------|-----------------------------------------------|--------------------------------------------------------|--------------------|
-| Success                         | /ping/<uuid>                                  | /ping/<ping-key>/<slug>                                | `Send-Check`       |
-| Start                           | /ping/<uuid>/start                            | /ping/<ping-key>/<slug>/start                          | `Send-Check`       |
-| Failure                         | /ping/<uuid>/fail                             | /ping/<ping-key>/<slug>/fail                           | `Send-Check`       |
-| Log                             | /ping/<uuid>/log                              | /ping/<ping-key>/<slug>/log                            | `Send-Check`       |
-| Report script's exit status     | /ping/<uuid>/<exit-status>                    | /ping/<ping-key>/<slug>/<exit-status>                  | `Send-Check`       |
+| Ping Action                  | Endpoint Format (UUID)         | Endpoint Format (PingKey/Slug)         | PowerShell Function |
+|------------------------------|-------------------------------|----------------------------------------|--------------------|
+| Success                      | /ping/&lt;uuid&gt;              | /ping/&lt;ping-key&gt;/&lt;slug&gt;         | `Send-Check`       |
+| Start                        | /ping/&lt;uuid&gt;/start         | /ping/&lt;ping-key&gt;/&lt;slug&gt;/start  | `Send-Check`       |
+| Failure                      | /ping/&lt;uuid&gt;/fail          | /ping/&lt;ping-key&gt;/&lt;slug&gt;/fail   | `Send-Check`       |
+| Log                          | /ping/&lt;uuid&gt;/log           | /ping/&lt;ping-key&gt;/&lt;slug&gt;/log    | `Send-Check`       |
+| Report script's exit status  | /ping/&lt;uuid&gt;/&lt;exit-status&gt; | /ping/&lt;ping-key&gt;/&lt;slug&gt;/&lt;exit-status&gt; | `Send-Check`       |
 
 ---
 
