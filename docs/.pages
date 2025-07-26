@@ -1,0 +1,8 @@
+nav:
+  - index.md
+  - Send-Check.md
+  - Management
+  - healthcheckspwsh.md
+  - CHANGELOG.md
+
+collapse_single_pages: true
