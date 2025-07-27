@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: healthcheckspwsh
 ms.date: 07/26/2025
 PlatyPS schema version: 2024-05-01
-title: Send-Check
+title: Ping
 hide:
   - navigation
 ---

@@ -19,15 +19,13 @@ Get details about one or more Healthchecks checks by UUID, slug, or tag.
 
 ### __AllParameterSets
 
-```
-Get-Check [-ApiKey] <string> [-BaseUrl] <string> [[-Slug] <string>] [[-Tag] <string[]>]
- [[-UUID] <string>] [<CommonParameters>]
+```powershell
+Get-Check [-ApiKey] <string> [-BaseUrl] <string> [[-Slug] <string>] [[-Tag] <string[]>] [[-UUID] <string>] [<CommonParameters>]
 ```
 
 ## ALIASES
 
-This cmdlet has the following aliases,
-  {{Insert list of aliases}}
+_None_
 
 ## DESCRIPTION
 
@@ -39,13 +37,17 @@ If UUID is specified, Slug and Tag must not be used.
 
 ### EXAMPLE 1
 
+```powershell
 Get-Check -ApiKey $apiKey -BaseUrl "https://checks.example.com" -UUID "f618072a-7bde-4eee-af63-71a77c5723bc"
+```
 
 Retrieves the check with the specified UUID.
 
 ### EXAMPLE 2
 
+```powershell
 Get-Check -ApiKey $apiKey -BaseUrl "https://checks.example.com" -Tag "prod","db"
+```
 
 Retrieves all checks with the tags "prod" and "db".
 
@@ -167,19 +169,26 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+_None_
+
 ## OUTPUTS
 
-### PSCustomObject with Url
+### PSCustomObject with Url, StatusCode, StatusMessage, Checks, and Success properties
 
-{{ Fill in the Description }}
+Returns a PSCustomObject with the following properties:
+- Url
+- StatusCode
+- StatusMessage
+- Checks
+- Success
 
 ## NOTES
 
 If UUID is specified, do not specify Slug or Tag.
 All parameters except ApiKey and BaseUrl are optional.
 
-
 ## RELATED LINKS
 
-{{ Fill in the related links here }}
+- [Healthchecks API v3 Docs](https://healthchecks.io/docs/api/)
+- [Project Repository](https://github.com/ptmorris1/healthchecks-pwsh)
 

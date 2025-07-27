@@ -19,14 +19,13 @@ List all badge URLs for tags in the Healthchecks project.
 
 ### __AllParameterSets
 
-```
+```powershell
 Get-ProjectBadges [-ApiKey] <string> [-BaseUrl] <string> [<CommonParameters>]
 ```
 
 ## ALIASES
 
-This cmdlet has the following aliases,
-  {{Insert list of aliases}}
+_None_
 
 ## DESCRIPTION
 
@@ -36,14 +35,15 @@ Retrieves a map of all tags in the project, with badge URLs for each tag and for
 
 ### EXAMPLE 1
 
+```powershell
 Get-ProjectBadges -ApiKey $apiKey -BaseUrl "https://checks.example.com"
+```
 
 Lists all badge URLs for the project.
 
 ## PARAMETERS
 
 ### -ApiKey
-
 The Healthchecks API key for authentication.
 
 ```yaml
@@ -64,7 +64,6 @@ HelpMessage: ''
 ```
 
 ### -BaseUrl
-
 The base URL of the Healthchecks instance.
 
 ```yaml
@@ -86,26 +85,29 @@ HelpMessage: ''
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
--InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
--ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
-[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable, -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
+_None_
+
 ## OUTPUTS
 
-### PSCustomObject with Url
+### PSCustomObject with Url, StatusCode, StatusMessage, Badges, and Success properties
 
-{{ Fill in the Description }}
+Returns a PSCustomObject with the following properties:
+- Url
+- StatusCode
+- StatusMessage
+- Badges
+- Success
 
 ## NOTES
 
-Only works for projects you have permission to view.
-All parameters are required.
-
+Only works for projects you have permission to view. All parameters are required.
 
 ## RELATED LINKS
 
-{{ Fill in the related links here }}
+- [Healthchecks API v3 Docs](https://healthchecks.io/docs/api/)
+- [Project Repository](https://github.com/ptmorris1/healthchecks-pwsh)
 
