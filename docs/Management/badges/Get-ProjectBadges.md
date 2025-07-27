@@ -1,7 +1,7 @@
 ---
 document type: cmdlet
 external help file: healthcheckspwsh-Help.xml
-HelpUri: ''
+HelpUri: 'https://ptmorris1.github.io/healthchecks-pwsh/Management/badges/Get-ProjectBadges.html'
 Locale: en-US
 Module Name: healthcheckspwsh
 ms.date: 07/26/2025
@@ -110,4 +110,3 @@ Only works for projects you have permission to view. All parameters are required
 
 - [Healthchecks API v3 Docs](https://healthchecks.io/docs/api/)
 - [Project Repository](https://github.com/ptmorris1/healthchecks-pwsh)
-

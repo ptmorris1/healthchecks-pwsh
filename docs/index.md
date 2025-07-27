@@ -9,10 +9,7 @@ hide:
 ![API](https://img.shields.io/badge/API-v3-blueviolet?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blue?style=flat-square)
 
-!!! tip "HealthchecksPwsh for PowerShell"
-    **HealthchecksPwsh** brings the full power of [Healthchecks.io](https://healthchecks.io) to PowerShell, making it easy to automate uptime monitoring and job notifications for any environment.
-
-## Introduction
+## 📖 Introduction
 
 [Healthchecks.io](https://healthchecks.io) is a free and open-source service for monitoring scheduled jobs (cron, Windows Scheduled Tasks, etc.). It notifies you if your scripts or scheduled tasks do not run on time, providing peace of mind for system administrators and developers.
 

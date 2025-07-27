@@ -26,6 +26,7 @@ Install-PSResource -Name HealthchecksPwsh -Repository PSGallery -Scope CurrentUs
 
 ---
 
+
 ## 📚 Management API Function Mapping
 
 | API Endpoint Description                | HTTP Method & Path                                                        | PowerShell Function      |
@@ -81,6 +82,14 @@ Send-Check -PingKey "<ping-key>" -Slug "<slug>" -BaseUrl "https://checks.example
 
 > [!IMPORTANT]
 > All cmdlets require at least `-ApiKey` and `-BaseUrl` parameters (except `Send-Check`, which uses ping endpoints). See comment-based help (`Get-Help <FunctionName> -Full`) for details and examples.
+
+---
+
+## 📖 Documentation
+
+For full documentation, usage examples, and cmdlet reference, check out the online docs:
+
+👉 [HealthchecksPwsh Documentation](https://ptmorris1.github.io/healthchecks-pwsh/index.html)
 
 ---
 
