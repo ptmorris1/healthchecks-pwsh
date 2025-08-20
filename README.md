@@ -102,4 +102,4 @@ Contributions, issues, and feature requests are welcome! Feel free to open an is
 ## 🔗 Resources
 
 - [Healthchecks API v3 Docs](https://healthchecks.io/docs/api/)
-- [PowerShell Gallery](https://www.powershellgallery.com/packages/healthchecks-pwsh)
+- [PowerShell Gallery](https://www.powershellgallery.com/packages/HealthchecksPwsh)
