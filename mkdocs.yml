@@ -34,8 +34,11 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.progress
     - toc.follow
-    #- toc.integrate
+    - content.code.copy
+    
 
 plugins:
   - offline:
@@ -43,6 +46,8 @@ plugins:
   - search:
       enabled: true
   - awesome-pages
+  - privacy
+  
 
 markdown_extensions:
   - admonition
