@@ -4,7 +4,7 @@ external help file: healthcheckspwsh-Help.xml
 HelpUri: ''
 Locale: en-US
 Module Name: healthcheckspwsh
-ms.date: 07/26/2025
+ms.date: 07/09/2026
 PlatyPS schema version: 2024-05-01
 title: Ping
 hide:
@@ -22,7 +22,7 @@ Send a ping to a Healthchecks check by UUID or PingKey/Slug.
 ### __AllParameterSets
 
 ```powershell
-Send-Check [[-UUID] <string>] [[-PingKey] <string>] [[-Slug] <string>] [-BaseUrl] <string> [[-RunID] <string>] [[-ExitStatus] <int>] [-Start] [-Success] [-Failure] [-Log] [-Create] [<CommonParameters>]
+Send-Check [[-UUID] <string>] [[-PingKey] <string>] [[-Slug] <string>] [-BaseUrl] <string> [[-RunID] <string>] [[-ExitStatus] <int>] [[-Body] <string>] [-Start] [-Success] [-Failure] [-Log] [-Create] [<CommonParameters>]
 ```
 
 ## ALIASES
@@ -53,6 +53,14 @@ Send-Check -PingKey "abc123" -Slug "my-check" -BaseUrl "https://checks.example.c
 
 Sends a ping to the check with the specified PingKey and Slug, creating it if it does not exist.
 
+### EXAMPLE 3
+
+```powershell
+Send-Check -UUID "f618072a-7bde-4eee-af63-71a77c5723bc" -BaseUrl "https://checks.example.com" -Log -Body "Backup completed: 3 files processed."
+```
+
+Sends a "log" ping with a body payload encoded as UTF-8 via HTTP POST.
+
 ## PARAMETERS
 
 ### -BaseUrl
@@ -67,6 +75,26 @@ ParameterSets:
 - Name: (All)
   Position: 3
   IsRequired: true
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -Body
+(Optional) A string to send as the request body. When provided, the request is sent as an HTTP POST with the body encoded as UTF-8 (`text/plain; charset=utf-8`). When omitted, the request uses GET with no body.
+
+```yaml
+Type: System.String
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: 6
+  IsRequired: false
   ValueFromPipeline: false
   ValueFromPipelineByPropertyName: false
   ValueFromRemainingArguments: false

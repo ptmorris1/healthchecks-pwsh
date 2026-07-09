@@ -1,5 +1,5 @@
 @{
-    ModuleVersion   = '1.0.1'
+    ModuleVersion   = '1.1.0'
     Guid            = '7da498f6-4c96-4146-8730-febfc16920a4'
     CompanyName     = 'Patrick Morris '
     Copyright       = '2025 Patrick Morris'
@@ -16,9 +16,18 @@
             ProjectURI   = 'https://github.com/ptmorris1/healthchecks-pwsh'
             LicenseURI   = 'https://github.com/ptmorris1/healthchecks-pwsh/blob/main/LICENSE'            
             ReleaseNotes = @'
+---
+hide:
+  - navigation
+---
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
+## [1.1.0] - 2026-07-09
+### Added
+- Added `-Body` parameter to `Send-Check`. When provided, the ping is sent as an HTTP POST with the body encoded as UTF-8 (`text/plain; charset=utf-8`). Falls back to GET when no body is supplied.
 
 ## [1.0.1] - 2025-07-26
 ### Fixed
@@ -47,4 +56,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
         }
     }
 }
+
 

@@ -7,6 +7,10 @@ hide:
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2026-07-09
+### Added
+- Added `-Body` parameter to `Send-Check`. When provided, the ping is sent as an HTTP POST with the body encoded as UTF-8 (`text/plain; charset=utf-8`). Falls back to GET when no body is supplied.
+
 ## [1.0.1] - 2025-07-26
 ### Fixed
 - Fixed typo in the `public` folder name.

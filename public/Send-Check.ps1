@@ -36,6 +36,9 @@ function Send-Check {
     .PARAMETER ExitStatus
         (Optional) The exit status code to send with the ping.
 
+    .PARAMETER Body
+        (Optional) A string to send as the request body. If provided, the request is sent as POST with the body encoded as UTF-8.
+
     .PARAMETER Create
         (Optional) Switch. If specified, create the check if it does not exist (PingKey/Slug only).
 
@@ -75,6 +78,8 @@ function Send-Check {
         [switch]$Log,
 
         [int]$ExitStatus,
+
+        [string]$Body,
 
         [switch]$Create
     )
@@ -139,7 +144,18 @@ function Send-Check {
     $userAgent = "HealthchecksPwsh/$pwshVersion"
 
     try {
-        $response = Invoke-WebRequest -Uri $finalUrl -UserAgent $userAgent -Method Get -ErrorAction Stop
+        $iwrParams = @{
+            Uri       = $finalUrl
+            UserAgent = $userAgent
+            Method    = 'Get'
+            ErrorAction = 'Stop'
+        }
+        if ($Body) {
+            $iwrParams['Method']      = 'Post'
+            $iwrParams['Body']        = [System.Text.Encoding]::UTF8.GetBytes($Body)
+            $iwrParams['ContentType'] = 'text/plain; charset=utf-8'
+        }
+        $response = Invoke-WebRequest @iwrParams
         $statusMsg = switch ($response.StatusCode) {
             200 { "200 OK (The request succeeded.)" }
             201 { "201 Created (A new check was automatically created, the request succeeded.)" }
