@@ -1,5 +1,5 @@
 @{
-    ModuleVersion   = '1.1.0'
+    ModuleVersion   = '1.2.0'
     Guid            = '7da498f6-4c96-4146-8730-febfc16920a4'
     CompanyName     = 'Patrick Morris '
     Copyright       = '2025 Patrick Morris'
@@ -24,6 +24,11 @@ hide:
 # Changelog
 
 All notable changes to this project will be documented in this file.
+
+## [1.2.0] - 2026-08-15
+### Fixed
+- Fixed `Send-Check` to avoid appending `/0` when no status parameter is specified.
+- Fixed the `-Start` parameter so it appends `/start` and restored `-Success` support for `/0`.
 
 ## [1.1.0] - 2026-07-09
 ### Added
@@ -56,5 +61,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
         }
     }
 }
+
 
 

@@ -101,8 +101,10 @@ function Send-Check {
     # Build endpoint
     if ($PingKey -and $Slug) {
         $endpoint = "$base/ping/$PingKey/$Slug"
-        if ($ExitStatus -ne $null) {
+        if ($PSBoundParameters.ContainsKey('ExitStatus')) {
             $endpoint += "/$ExitStatus"
+        } elseif ($Success) {
+            $endpoint += "/0"
         } elseif ($Start) {
             $endpoint += "/start"
         } elseif ($Failure) {
@@ -122,8 +124,10 @@ function Send-Check {
         $finalUrl = "$endpoint$query"
     } elseif ($UUID) {
         $endpoint = "$base/ping/$UUID"
-        if ($ExitStatus -ne $null) {
+        if ($PSBoundParameters.ContainsKey('ExitStatus')) {
             $endpoint += "/$ExitStatus"
+        } elseif ($Success) {
+            $endpoint += "/0"
         } elseif ($Start) {
             $endpoint += "/start"
         } elseif ($Failure) {

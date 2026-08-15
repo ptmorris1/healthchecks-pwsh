@@ -7,6 +7,11 @@ hide:
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2026-08-15
+### Fixed
+- Fixed `Send-Check` to avoid appending `/0` when no status parameter is specified.
+- Fixed the `-Start` parameter so it appends `/start` and restored `-Success` support for `/0`.
+
 ## [1.1.0] - 2026-07-09
 ### Added
 - Added `-Body` parameter to `Send-Check`. When provided, the ping is sent as an HTTP POST with the body encoded as UTF-8 (`text/plain; charset=utf-8`). Falls back to GET when no body is supplied.
